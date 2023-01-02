@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  discord_bot:
+    container_name: server_status
+    build: .
+    restart: always
+    env_file:
+      - .env

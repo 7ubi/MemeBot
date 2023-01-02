@@ -1,9 +1,6 @@
-import time
-
 import discord
 from memebot import MemeBot
 import os
-
 
 intents = discord.Intents.all()
 client = discord.Client(intents=intents)

@@ -15,6 +15,7 @@ class MemeBot:
 
     async def playMeme(self, message):
         voice_client = message.guild.voice_client
+        
         voicefiles = []
         for file in glob.glob('./sounds/*.MP3'):
             voicefiles.append(file)
@@ -34,6 +35,7 @@ class MemeBot:
         user = message.author
 
         if user.voice == None:
+            self.logger.warning('User {0} is not in a voice channel'.format(user))
             await message.channel.send('You have to be in a voice channel.') 
             return
         
