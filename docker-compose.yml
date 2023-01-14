@@ -3,6 +3,6 @@ services:
   discord_bot:
     container_name: meme_bot
     build: .
-    restart: always
+    restart: unless-stopped
     env_file:
       - .env
